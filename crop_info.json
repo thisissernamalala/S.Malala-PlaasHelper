@@ -1,0 +1,101 @@
+{
+    "crops": [
+      {
+        "name": "Apple Blotch",
+        "description": "Apple blotch is a fungal disease that causes dark, irregular spots on apple leaves and fruit. It can lead to reduced fruit quality and premature leaf drop.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/apple_blotch.png"
+      },
+      {
+        "name": "Apple Scab",
+        "description": "Apple scab is a fungal disease that causes dark, sunken lesions on leaves, fruit, and stems. It reduces fruit yield and quality.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/apple_scab.png"
+      },
+      {
+        "name": "Apple Healthy Apple",
+        "description": "Healthy apple trees are free from diseases and pests. They have robust foliage, fruit, and stems.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/healthy_apple.png"
+      },
+      {
+        "name": "Apple Rotten Apple",
+        "description": "Rotten apples are affected by various diseases or storage issues, causing decay and a mushy texture.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/rotten_apple.png"
+      },
+      {
+        "name": "Corn (Maize) Ear Rot",
+        "description": "Ear rot is caused by fungi that infect corn ears, leading to kernel discoloration, mold growth, and reduced quality.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/ear_rot.png"
+      },
+      {
+        "name": "Corn (Maize) Fall Armyworm",
+        "description": "Fall armyworm is a pest that damages corn by feeding on leaves and ears, causing reduced yield and plant health.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/fall_armyworm.png"
+      },
+      {
+        "name": "Corn (Maize) Healthy Corn (Maize)",
+        "description": "Healthy corn plants have strong, vigorous growth and produce high-quality ears of corn.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/healthy_corn.png"
+      },
+      {
+        "name": "Corn (Maize) Stem Borer",
+        "description": "Stem borer is a pest that burrows into the corn stalk, weakening the plant and potentially leading to lodging and reduced yield.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/stem_borer.png"
+      },
+      {
+        "name": "Grapes Healthy Grapes",
+        "description": "Healthy grapevines exhibit vigorous growth, robust leaves, and high-quality fruit.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/healthy_grapes.png"
+      },
+      {
+        "name": "Potato Healthy Potato",
+        "description": "Healthy potato plants have strong, green foliage and produce high-quality tubers.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/healthy_potato.png"
+      },
+      {
+        "name": "Potato Rotten Potato",
+        "description": "Rotten potatoes are affected by diseases or improper storage, leading to decay and an unappetizing appearance.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/rotten_potato.png"
+      },
+      {
+        "name": "Strawberry Healthy Strawberry or Pickable Strawberry",
+        "description": "Healthy or pickable strawberries are ripe and suitable for consumption, exhibiting vibrant color and firmness.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/healthy_pickable_strawberry.png"
+      },
+      {
+        "name": "Strawberry Rotten Strawberry",
+        "description": "Rotten strawberries are overripe or affected by diseases, leading to mushy texture and discoloration.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/rotten_strawberry.png"
+      },
+      {
+        "name": "Strawberry Unpickable Strawberry",
+        "description": "Unpickable strawberries are either under-ripe or affected by pests/diseases, making them unsuitable for consumption.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/unpickable_strawberry.png"
+      },
+      {
+        "name": "Tomato Ripe Tomato or Healthy Tomato",
+        "description": "Ripe or healthy tomatoes are fully developed and suitable for consumption, with a firm texture and vibrant color.",
+        "safe_to_consume": "Yes",
+        "image_url": "http://example.com/ripe_healthy_tomato.png"
+      },
+      {
+        "name": "Tomato Rotten Tomato",
+        "description": "Rotten tomatoes are affected by diseases or improper handling, causing decay and an unappealing texture.",
+        "safe_to_consume": "No",
+        "image_url": "http://example.com/rotten_tomato.png"
+      }
+    ]
+  }
+  

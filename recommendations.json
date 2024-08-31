@@ -1,0 +1,122 @@
+{
+  "Apple___Apple_scab": {
+    "name": "Apple Scab Treatment",
+    "image_url": "http://example.com/treatment_apple_scab.png",
+    "buy_link": "http://example.com/buy_apple_scab_treatment"
+  },
+  "Apple___Black_rot": {
+    "name": "Black Rot Control",
+    "image_url": "http://example.com/control_black_rot.png",
+    "buy_link": "http://example.com/buy_black_rot_control"
+  },
+  "Apple___Cedar_apple_rust": {
+    "name": "Cedar Apple Rust Treatment",
+    "image_url": "http://example.com/treatment_cedar_rust.png",
+    "buy_link": "http://example.com/buy_cedar_apple_rust_treatment"
+  },
+  "Blueberry___healthy": {
+    "name": "Blueberry Fertilizer",
+    "image_url": "http://example.com/blueberry_fertilizer.png",
+    "buy_link": "http://example.com/buy_blueberry_fertilizer"
+  },
+  "Corn___Cercospora_leaf_spot_Gray_leaf_spot": {
+    "name": "Gray Leaf Spot Fungicide",
+    "image_url": "http://example.com/gray_leaf_spot_fungicide.png",
+    "buy_link": "http://example.com/buy_gray_leaf_spot_fungicide"
+  },
+  "Corn___Common_rust": {
+    "name": "Common Rust Control",
+    "image_url": "http://example.com/control_common_rust.png",
+    "buy_link": "http://example.com/buy_common_rust_control"
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "name": "Northern Leaf Blight Fungicide",
+    "image_url": "http://example.com/northern_leaf_blight_fungicide.png",
+    "buy_link": "http://example.com/buy_northern_leaf_blight_fungicide"
+  },
+  "Grape___Black_rot": {
+    "name": "Black Rot Treatment",
+    "image_url": "http://example.com/treatment_black_rot.png",
+    "buy_link": "http://example.com/buy_black_rot_treatment"
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "name": "Esca Control",
+    "image_url": "http://example.com/control_esca.png",
+    "buy_link": "http://example.com/buy_esca_control"
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "name": "Leaf Blight Fungicide",
+    "image_url": "http://example.com/leaf_blight_fungicide.png",
+    "buy_link": "http://example.com/buy_leaf_blight_fungicide"
+  },
+  "Potato___Early_blight": {
+    "name": "Early Blight Control",
+    "image_url": "http://example.com/early_blight_control.png",
+    "buy_link": "http://example.com/buy_early_blight_control"
+  },
+  "Potato___Late_blight": {
+    "name": "Late Blight Fungicide",
+    "image_url": "http://example.com/late_blight_fungicide.png",
+    "buy_link": "http://example.com/buy_late_blight_fungicide"
+  },
+  "Potato___healthy": {
+    "name": "Potato Nutrient Supplement",
+    "image_url": "http://example.com/potato_nutrient.png",
+    "buy_link": "http://example.com/buy_potato_nutrient"
+  },
+  "Strawberry___Leaf_scorch": {
+    "name": "Leaf Scorch Treatment",
+    "image_url": "http://example.com/leaf_scorch_treatment.png",
+    "buy_link": "http://example.com/buy_leaf_scorch_treatment"
+  },
+  "Tomato___Bacterial_spot": {
+    "name": "Bacterial Spot Control",
+    "image_url": "http://example.com/bacterial_spot_control.png",
+    "buy_link": "http://example.com/buy_bacterial_spot_control"
+  },
+  "Tomato___Early_blight": {
+    "name": "Early Blight Fungicide",
+    "image_url": "http://example.com/early_blight_fungicide.png",
+    "buy_link": "http://example.com/buy_early_blight_fungicide"
+  },
+  "Tomato___Late_blight": {
+    "name": "Late Blight Treatment",
+    "image_url": "http://example.com/late_blight_treatment.png",
+    "buy_link": "http://example.com/buy_late_blight_treatment"
+  },
+  "Tomato___Leaf_Mold": {
+    "name": "Leaf Mold Fungicide",
+    "image_url": "http://example.com/leaf_mold_fungicide.png",
+    "buy_link": "http://example.com/buy_leaf_mold_fungicide"
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "name": "Septoria Leaf Spot Control",
+    "image_url": "http://example.com/septoria_leaf_spot_control.png",
+    "buy_link": "http://example.com/buy_septoria_leaf_spot_control"
+  },
+  "Tomato___Spider_mites_Two-spotted_spider_mite": {
+    "name": "Spider Mite Miticide",
+    "image_url": "http://example.com/spider_mite_miticide.png",
+    "buy_link": "http://example.com/buy_spider_mite_miticide"
+  },
+  "Tomato___Target_Spot": {
+    "name": "Target Spot Fungicide",
+    "image_url": "http://example.com/target_spot_fungicide.png",
+    "buy_link": "http://example.com/buy_target_spot_fungicide"
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "name": "TYLCV Management",
+    "image_url": "http://example.com/tylc_v_management.png",
+    "buy_link": "http://example.com/buy_ty_curl_virus_management"
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "name": "Tomato Mosaic Virus Control",
+    "image_url": "http://example.com/tomato_mosaic_virus_control.png",
+    "buy_link": "http://example.com/buy_tomato_mosaic_virus_control"
+  },
+  "Background_without_leaves": {
+    "name": "N/A",
+    "image_url": "http://example.com/background.png",
+    "buy_link": "N/A"
+  }
+}

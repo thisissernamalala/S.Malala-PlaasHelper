@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block pagetitle %} {{ title }} {% endblock pagetitle %}
+{% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!-- Title -->
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <h1 class="display-4" style="font-weight: 400; color: rgb(4, 54, 4)">
+            <b>{{ title }} 🍂</b>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Uploaded Image -->
+      <div class="row mb-4 justify-content-center">
+        <div class="col-md-6">
+          <div class="p-3 bg-white shadow rounded-lg">
+            <img
+              src="{{ url_for('static', filename='uploads/' + image_filename) }}"
+              width="100%"
+              height="auto"
+              style="max-width: 350px"
+              alt="Uploaded Image"
+            />
+          </div>
+        </div>
+      </div>
+
+      {% if is_disease %}
+      <!-- Disease Detection Results -->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="p-3 bg-white shadow rounded-lg">
+            <h5>
+              <b>
+                {% if title in ['Apple', 'Tomato'] %} Tips to Grow Healthy Plants: {% else %} Brief Description: {% endif %}
+              </b>
+            </h5>
+            <p>{{ desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col">
+          <div class="p-3 bg-white shadow rounded-lg">
+            <h5>
+              <b>Prevention Tips:</b>
+            </h5>
+            <p>{{ prevent }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specialist Information -->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="p-3 bg-white shadow rounded-lg">
+            <h5><b>Recommended Specialist:</b></h5>
+            <p><b>Name:</b> {{ specialist_name }}</p>
+            <p><b>Description:</b> {{ specialist_description }}</p>
+            <p><b>Contact:</b> {{ specialist_contact }}</p>
+          </div>
+        </div>
+      </div>
+
+      {% else %}
+      <!-- Crop Classification Results -->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="p-3 bg-white shadow rounded-lg">
+            <h5><b>Crop Type:</b> {{ crop_type }}</h5>
+            <p>{{ crop_details }}</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock body %}

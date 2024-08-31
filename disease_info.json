@@ -1,0 +1,172 @@
+{
+  "diseases": [
+    {
+      "name": "Apple___Apple_scab",
+      "description": "Apple scab is a fungal disease that affects apple trees. It causes dark, sunken lesions on leaves, fruit, and stems. These lesions can cause premature leaf drop and reduce fruit yield. The disease is caused by the fungus *Venturia inaequalis*.",
+      "prevention": "To prevent apple scab, use resistant apple varieties, remove fallen leaves and fruit, and apply fungicides during the growing season. Ensuring good air circulation around the tree can also help reduce humidity, which favors the growth of the fungus.",
+      "image_url": "http://example.com/apple_scab.png"
+    },
+    {
+      "name": "Apple___Black_rot",
+      "description": "Black rot is a disease affecting apple trees, caused by the fungus *Botryosphaeria obtusa*. It results in dark, sunken lesions on the fruit and can cause premature fruit drop. It can also affect the branches, causing cankers.",
+      "prevention": "To control black rot, practice good sanitation by removing infected plant debris, avoid overhead irrigation to minimize leaf wetness, and apply appropriate fungicides. Prune affected branches and ensure proper tree spacing for good air circulation.",
+      "image_url": "http://example.com/black_rot.png"
+    },
+    {
+      "name": "Apple___Cedar_apple_rust",
+      "description": "Cedar apple rust is a disease caused by the fungus *Gymnosporangium juniperi-virginianae*. It affects apples and cedar trees, causing bright orange spots on apple leaves and fruit. The disease requires both apple and cedar trees to complete its life cycle.",
+      "prevention": "Control cedar apple rust by removing nearby cedar trees, applying fungicides, and removing affected plant parts. Regularly inspect apple trees for symptoms and manage the disease promptly.",
+      "image_url": "http://example.com/cedar_apple_rust.png"
+    },
+    {
+      "name": "Apple___healthy",
+      "description": "Healthy apple trees are free from diseases and pests. They have robust foliage, fruit, and stems. Proper care includes regular watering, fertilization, and pest management.",
+      "prevention": "Maintain tree health through proper horticultural practices, including appropriate watering, fertilization, and pest control. Regularly inspect trees for any signs of disease or pest activity.",
+      "image_url": "http://example.com/healthy_apple.png"
+    },
+    {
+      "name": "Corn___Cercospora_leaf_spot_Gray_leaf_spot",
+      "description": "Cercospora leaf spot, also known as gray leaf spot, is caused by the fungus *Cercospora zeae-maydis*. It affects corn leaves, causing grayish spots with dark borders. The disease can reduce photosynthesis and yield.",
+      "prevention": "To manage gray leaf spot, plant resistant corn varieties, rotate crops, and apply fungicides if necessary. Maintain good field hygiene and avoid excessive nitrogen application.",
+      "image_url": "http://example.com/gray_leaf_spot.png"
+    },
+    {
+      "name": "Corn___Common_rust",
+      "description": "Common rust in corn is caused by the fungus *Puccinia sorghi*. It produces reddish-brown pustules on leaves, which can reduce photosynthesis and yield. It is a widespread and common disease in corn.",
+      "prevention": "Manage common rust by planting resistant varieties, applying fungicides, and practicing crop rotation. Early detection and control are key to minimizing damage.",
+      "image_url": "http://example.com/common_rust.png"
+    },
+    {
+      "name": "Corn___Northern_Leaf_Blight",
+      "description": "Northern leaf blight is a disease caused by the fungus *Exserohilum turcicum*. It causes large, elliptical lesions on corn leaves, leading to reduced photosynthesis and potential yield loss.",
+      "prevention": "Prevent northern leaf blight by planting resistant varieties, practicing crop rotation, and applying fungicides if needed. Maintain good field hygiene and avoid excessive nitrogen application.",
+      "image_url": "http://example.com/northern_leaf_blight.png"
+    },
+    {
+      "name": "Corn___healthy",
+      "description": "Healthy corn plants have strong, vigorous growth with no visible signs of disease or pest damage. They produce high-quality ears of corn and have good overall plant health.",
+      "prevention": "Ensure proper care through appropriate watering, fertilization, and pest management. Regularly inspect plants for signs of disease or pests.",
+      "image_url": "http://example.com/healthy_corn.png"
+    },
+    {
+      "name": "Grape___Black_rot",
+      "description": "Black rot is a fungal disease affecting grapes, caused by *Guignardia bidwellii*. It leads to dark, sunken lesions on the fruit, leaves, and stems. The disease can cause significant yield loss and reduce fruit quality.",
+      "prevention": "To manage black rot, remove infected plant debris, apply fungicides, and ensure good air circulation. Practice crop rotation and select resistant grape varieties.",
+      "image_url": "http://example.com/black_rot_grape.png"
+    },
+    {
+      "name": "Grape___Esca_(Black_Measles)",
+      "description": "Esca, or black measles, is a complex disease affecting grapes, caused by several fungi including *Phaeoacremonium* and *Phaeomoniella*. It causes wood decay, leaf spots, and premature grape drop.",
+      "prevention": "Manage esca by removing and destroying infected vines, using disease-resistant varieties, and improving vineyard sanitation. Proper pruning and avoiding excessive humidity can help reduce disease incidence.",
+      "image_url": "http://example.com/esca_grape.png"
+    },
+    {
+      "name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "description": "Leaf blight, caused by *Isariopsis griseola*, leads to dark, sunken spots on grape leaves. It can reduce photosynthesis and impact fruit quality. The disease often occurs during warm, wet conditions.",
+      "prevention": "Control leaf blight by removing affected leaves, applying fungicides, and ensuring proper vine spacing for good air circulation. Regularly monitor vines for early signs of disease.",
+      "image_url": "http://example.com/leaf_blight_grape.png"
+    },
+    {
+      "name": "Grape___healthy",
+      "description": "Healthy grapevines exhibit vigorous growth, robust leaves, and high-quality fruit. They are free from visible disease or pest damage.",
+      "prevention": "Maintain grapevine health through proper irrigation, fertilization, and pest management. Regularly inspect plants and practice good vineyard hygiene.",
+      "image_url": "http://example.com/healthy_grape.png"
+    },
+    {
+      "name": "Potato___Early_blight",
+      "description": "Early blight is caused by the fungus *Alternaria solani*. It causes dark, concentric lesions on potato leaves, leading to premature leaf drop and reduced tuber quality.",
+      "prevention": "Manage early blight by using resistant varieties, applying fungicides, and practicing crop rotation. Remove infected plant debris and maintain proper field hygiene.",
+      "image_url": "http://example.com/early_blight_potato.png"
+    },
+    {
+      "name": "Potato___Late_blight",
+      "description": "Late blight is caused by the fungus *Phytophthora infestans*. It affects potato leaves and tubers, causing dark, water-soaked lesions. The disease can spread rapidly and lead to significant crop loss.",
+      "prevention": "Prevent late blight by using resistant varieties, applying fungicides, and practicing crop rotation. Remove infected plant debris and manage field moisture levels.",
+      "image_url": "http://example.com/late_blight_potato.png"
+    },
+    {
+      "name": "Potato___healthy",
+      "description": "Healthy potato plants have strong, green foliage and produce high-quality tubers. They are free from visible signs of disease or pest damage.",
+      "prevention": "Ensure proper care through appropriate watering, fertilization, and pest management. Regularly inspect plants for any signs of disease or pests.",
+      "image_url": "http://example.com/healthy_potato.png"
+    },
+    {
+      "name": "Strawberry___Leaf_scorch",
+      "description": "Leaf scorch in strawberries is caused by various factors, including high temperatures, low humidity, and certain pathogens. It leads to browning and curling of leaf edges.",
+      "prevention": "Prevent leaf scorch by providing adequate irrigation, ensuring proper plant spacing, and avoiding excessive fertilizer. Regularly monitor plants for signs of stress and manage environmental conditions.",
+      "image_url": "http://example.com/leaf_scorch_strawberry.png"
+    },
+    {
+      "name": "Strawberry___healthy",
+      "description": "Healthy strawberry plants have lush green foliage and produce high-quality fruit. They are free from disease and pest damage.",
+      "prevention": "Maintain strawberry health through proper watering, fertilization, and pest control. Regularly inspect plants and practice good garden hygiene.",
+      "image_url": "http://example.com/healthy_strawberry.png"
+    },
+    {
+      "name": "Tomato___Bacterial_spot",
+      "description": "Bacterial spot in tomatoes is caused by the bacterium *Xanthomonas campestris*. It results in dark, sunken lesions on leaves, stems, and fruit. The disease can lead to reduced yield and quality.",
+      "prevention": "Manage bacterial spot by using resistant tomato varieties, applying copper-based bactericides, and practicing crop rotation. Remove infected plant debris and avoid overhead irrigation.",
+      "image_url": "http://example.com/bacterial_spot_tomato.png"
+    },
+    {
+      "name": "Tomato___Early_blight",
+      "description": "Early blight is caused by the fungus *Alternaria solani*. It leads to dark, concentric lesions on tomato leaves, resulting in reduced photosynthesis and potential yield loss.",
+      "prevention": "Control early blight by using resistant varieties, applying fungicides, and practicing crop rotation. Remove infected plant debris and ensure good air circulation.",
+      "image_url": "http://example.com/early_blight_tomato.png"
+    },
+    {
+      "name": "Tomato___Late_blight",
+      "description": "Late blight is caused by the fungus *Phytophthora infestans*. It affects tomato leaves and fruit, causing dark, water-soaked lesions. The disease can spread rapidly and lead to significant crop loss.",
+      "prevention": "Prevent late blight by using resistant varieties, applying fungicides, and practicing crop rotation. Manage field moisture levels and remove infected plant debris.",
+      "image_url": "http://example.com/late_blight_tomato.png"
+    },
+    {
+      "name": "Tomato___Leaf_Mold",
+      "description": "Leaf mold is caused by the fungus *Cladosporium fulvum*. It affects tomato leaves, leading to dark, fuzzy mold on the underside of leaves. The disease can reduce yield and fruit quality.",
+      "prevention": "Manage leaf mold by using resistant varieties, applying fungicides, and ensuring proper ventilation in the growing area. Remove infected plant debris and avoid overhead irrigation.",
+      "image_url": "http://example.com/leaf_mold_tomato.png"
+    },
+    {
+      "name": "Tomato___Septoria_leaf_spot",
+      "description": "Septoria leaf spot is caused by the fungus *Septoria lycopersici*. It leads to small, dark spots with pale centers on tomato leaves. The disease can cause significant defoliation and reduce yield.",
+      "prevention": "Control septoria leaf spot by using resistant varieties, applying fungicides, and practicing crop rotation. Remove infected leaves and improve air circulation around plants.",
+      "image_url": "http://example.com/septoria_leaf_spot_tomato.png"
+    },
+    {
+      "name": "Tomato___Spider_mites_Two-spotted_spider_mite",
+      "description": "Two-spotted spider mites are tiny pests that cause damage by sucking sap from tomato plants. This results in stippling, yellowing, and webbing on leaves. Heavy infestations can lead to reduced plant vigor and yield.",
+      "prevention": "Manage spider mites by using miticides, introducing natural predators, and maintaining proper plant spacing for good air circulation. Regularly inspect plants and remove infested foliage.",
+      "image_url": "http://example.com/spider_mites_tomato.png"
+    },
+    {
+      "name": "Tomato___Target_Spot",
+      "description": "Target spot is caused by the fungus *Corynespora cassiicola*. It results in dark, circular lesions with concentric rings on tomato leaves. The disease can cause premature leaf drop and affect fruit quality.",
+      "prevention": "Control target spot by using resistant varieties, applying fungicides, and practicing crop rotation. Remove infected plant debris and improve air circulation.",
+      "image_url": "http://example.com/target_spot_tomato.png"
+    },
+    {
+      "name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "description": "Tomato yellow leaf curl virus (TYLCV) is transmitted by whiteflies. It causes leaf curling, yellowing, and stunted growth in tomato plants. The virus can significantly reduce yield and quality.",
+      "prevention": "Prevent TYLCV by controlling whitefly populations with insecticides or natural predators, using resistant tomato varieties, and removing infected plants. Maintain good garden hygiene and avoid planting near other infected crops.",
+      "image_url": "http://example.com/tylcv_tomato.png"
+    },
+    {
+      "name": "Tomato___Tomato_mosaic_virus",
+      "description": "Tomato mosaic virus (ToMV) causes mottling and distortion of tomato leaves. Infected plants may also have reduced fruit quality and yield. The virus can spread through infected seeds and plant material.",
+      "prevention": "Manage tomato mosaic virus by using virus-free seeds, controlling insect vectors, and practicing good sanitation. Remove and destroy infected plants and avoid working with wet plants.",
+      "image_url": "http://example.com/tomato_mosaic_virus.png"
+    },
+    {
+      "name": "Tomato___healthy",
+      "description": "Healthy tomato plants have lush green foliage, abundant fruit, and no visible signs of disease or pest damage.",
+      "prevention": "Maintain plant health through proper care, including watering, fertilization, and pest control. Regularly inspect plants for signs of disease or pests and practice good garden hygiene.",
+      "image_url": "http://example.com/healthy_tomato.png"
+    },
+    {
+      "name": "Background_without_leaves",
+      "description": "This category represents images with no leaves or plants present. It is used as a reference for distinguishing healthy plant images from those affected by diseases.",
+      "prevention": "N/A",
+      "image_url": "http://example.com/background.png"
+    }
+  ]
+}

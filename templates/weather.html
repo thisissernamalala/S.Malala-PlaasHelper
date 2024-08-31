@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Weather{% endblock pagetitle %}
+{% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Embed your weather app using iframe -->
+      <h1 class="mb-4">Weather Application</h1>
+      <iframe
+        src="https://simpleandeasyweatherapplication.netlify.app/"
+        class="embed-responsive-item"
+        style="height: 600px; width: 100%;"
+        frameborder="0"
+      ></iframe>
+      
+      <!-- Date Range Form -->
+      <h2 class="mt-5">Weather Data Visualization</h2>
+      <form id="date-range-form" method="get" action="#">
+        <div class="form-group">
+          <label for="start_date">Start Date:</label>
+          <input type="date" id="start_date" name="start_date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="end_date">End Date:</label>
+          <input type="date" id="end_date" name="end_date" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+
+      <!-- Weather Plot -->
+      <div class="mt-5">
+        <h3>Temperature Plot</h3>
+        <div id="weather-plot-container" style="position: relative; height: 400px;">
+          <!-- Weather plot will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('date-range-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const startDate = document.getElementById('start_date').value;
+      const endDate = document.getElementById('end_date').value;
+
+      fetch(`/weather-plot?start_date=${startDate}&end_date=${endDate}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.error) {
+            alert(data.error);
+            return;
+          }
+
+          const dates = data.dates.map(date => new Date(date).toLocaleDateString());
+          const temps = data.temps;
+
+          const ctx = document.createElement('canvas');
+          document.getElementById('weather-plot-container').innerHTML = '';
+          document.getElementById('weather-plot-container').appendChild(ctx);
+
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: dates,
+              datasets: [{
+                label: 'Temperature (°C)',
+                data: temps,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  type: 'time',
+                  time: {
+                    unit: 'day'
+                  },
+                  title: {
+                    display: true,
+                    text: 'Date'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Temperature (°C)'
+                  }
+                }
+              }
+            }
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  });
+</script>
+{% endblock body %}
