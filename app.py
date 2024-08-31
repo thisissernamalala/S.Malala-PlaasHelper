@@ -24,8 +24,8 @@ with open('crop_info.json', 'r') as f:
 
 # Load models
 try:
-    crop_classifier_model = tf.keras.models.load_model("crop_classification_modell.h5")
-    disease_detection_model = tf.keras.models.load_model("crop_disease_model.h5")
+    crop_classifier_model = tf.keras.models.load_model("Trained Models/crop_classification_modell.h5")
+    disease_detection_model = tf.keras.models.load_model("Trained Models/crop_disease_model.h5")
     print("Models loaded successfully.")
 except Exception as e:
     print(f"Error loading models: {e}")
