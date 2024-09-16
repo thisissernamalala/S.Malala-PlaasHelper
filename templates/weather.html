@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+
 {% block pagetitle %}Weather{% endblock pagetitle %}
+
 {% block body %}
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-10">
-      <!-- Embed your weather app using iframe -->
       <h1 class="mb-4">Weather Application</h1>
       <iframe
         src="https://simpleandeasyweatherapplication.netlify.app/"
@@ -12,95 +13,27 @@
         style="height: 600px; width: 100%;"
         frameborder="0"
       ></iframe>
-      
-      <!-- Date Range Form -->
-      <h2 class="mt-5">Weather Data Visualization</h2>
-      <form id="date-range-form" method="get" action="#">
-        <div class="form-group">
-          <label for="start_date">Start Date:</label>
-          <input type="date" id="start_date" name="start_date" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label for="end_date">End Date:</label>
-          <input type="date" id="end_date" name="end_date" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-      </form>
 
-      <!-- Weather Plot -->
-      <div class="mt-5">
-        <h3>Temperature Plot</h3>
-        <div id="weather-plot-container" style="position: relative; height: 400px;">
-          <!-- Weather plot will be inserted here -->
-        </div>
-      </div>
+      <h2 class="mt-5">Detailed Weather forecast</h2>
+      
+      <iframe src="https://www.meteoblue.com/en/weather/widget/three/cape-town_south-africa_3369157?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 590px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/cape-town_south-africa_3369157?utm_source=three_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
+
+
+      <iframe src="https://www.meteoblue.com/en/weather/widget/daily/cape-town_south-africa_3369157?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=1&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 420px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/cape-town_south-africa_3369157?utm_source=daily_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
     </div>
   </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Chatbase chatbot configuration -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('date-range-form');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const startDate = document.getElementById('start_date').value;
-      const endDate = document.getElementById('end_date').value;
-
-      fetch(`/weather-plot?start_date=${startDate}&end_date=${endDate}`)
-        .then(response => response.json())
-        .then(data => {
-          if (data.error) {
-            alert(data.error);
-            return;
-          }
-
-          const dates = data.dates.map(date => new Date(date).toLocaleDateString());
-          const temps = data.temps;
-
-          const ctx = document.createElement('canvas');
-          document.getElementById('weather-plot-container').innerHTML = '';
-          document.getElementById('weather-plot-container').appendChild(ctx);
-
-          new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: dates,
-              datasets: [{
-                label: 'Temperature (°C)',
-                data: temps,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 1
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              scales: {
-                x: {
-                  type: 'time',
-                  time: {
-                    unit: 'day'
-                  },
-                  title: {
-                    display: true,
-                    text: 'Date'
-                  }
-                },
-                y: {
-                  title: {
-                    display: true,
-                    text: 'Temperature (°C)'
-                  }
-                }
-              }
-            }
-          });
-        })
-        .catch(error => console.error('Error:', error));
-    });
-  });
+  window.embeddedChatbotConfig = {
+    chatbotId: "Kn_iUIqlTzwsNl0fOjYLS",
+    domain: "www.chatbase.co",
+  };
 </script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="Kn_iUIqlTzwsNl0fOjYLS"
+  domain="www.chatbase.co"
+  defer
+></script>
 {% endblock body %}
