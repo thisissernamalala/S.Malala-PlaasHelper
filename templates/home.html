@@ -1,204 +1,193 @@
 {% extends 'base.html' %} {% block pagetitle %} Plant Disease Detection {%
-endblock pagetitle %} {% block body %}
-<style>
-  body {
-    overflow-x: hidden;
-  }
-  @media only screen and (max-width: 830px) {
-    .laptop {
-      display: none;
+  endblock pagetitle %} {% block body %}
+  <style>
+    body {
+      overflow-x: hidden;
     }
-  }
-  @media (min-width: 830px) and (max-width: 1536px) {
-    .mobile {
-      display: none;
+    @media only screen and (max-width: 830px) {
+      .laptop {
+        display: none;
+      }
     }
-  }
-</style>
-
-<div class="mobile p-5">
-  <div class="row mb-5 text-center text-white">
+    @media (min-width: 830px) and (max-width: 1536px) {
+      .mobile {
+        display: none;
+      }
+    }
+  </style>
+  
+  <div class="mobile p-5">
+    <div class="row mb-5 text-center text-white">
+      <div class="col-lg-10 mx-auto">
+        <h1
+          class="display-4"
+          style="padding-top: 2%; font-weight: 400; color: red"
+        >
+          <b>N.B‼️</b>
+        </h1>
+        <p class="lead" style="font-weight: 500; color: black">
+          Please use on a laptop/PC
+        </p>
+        <p class="lead" style="font-weight: 500; color: black">Thanks🤝</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mb-5 text-center text-white laptop">
     <div class="col-lg-10 mx-auto">
       <h1
         class="display-4"
-        style="padding-top: 2%; font-weight: 400; color: red"
+        style="padding-top: 2%; font-weight: 400; color: white"
       >
-        <b>N.B‼️</b>
+        <b>🍎Crop & Disease Insight Tool🍎</b>
       </h1>
-      <p class="lead" style="font-weight: 500; color: black">
-        Please use the app on a PC.
+      <p class="lead" style="font-weight: 500; color: bisque">
+        This Website Will Help To Detect Diseases From The Following Crops
       </p>
-      <p class="lead" style="font-weight: 500; color: black">🙏💖</p>
     </div>
   </div>
-</div>
-
-<div class="row mb-5 text-center text-white laptop">
-  <div class="col-lg-10 mx-auto">
-    <h1
-      class="display-4"
-      style="padding-top: 2%; font-weight: 400; color: white"
+  
+  <center class="laptop">
+    <a href="/index">
+      <button class="bttn-pill bttn-lg btn-success">
+        <b style="color: black">PlaasHelper🍇</b>
+      </button>
+    </a>
+    <!-- Upload Image Button -->
+    <button
+      class="bttn-pill bttn-lg btn-primary mt-3"
+      data-toggle="modal"
+      data-target="#uploadModal"
     >
-      <b>🍎Crop & Disease Insight Tool🍎</b>
-    </h1>
-    <p class="lead" style="font-weight: 500; color: black">
-      This Website Will Help To Detect Diseases From The Following Crops
-    </p>
-  </div>
-</div>
-
-<center class="laptop">
-  <a href="/index">
-    <button class="bttn-pill bttn-lg btn-success">
-      <b style="color: black">PlaasHelper🍇</b>
+      <b style="color: black">Upload an Image</b>
     </button>
-  </a>
-  <!-- Upload Image Button -->
-  <button
-    class="bttn-pill bttn-lg btn-primary mt-3"
-    data-toggle="modal"
-    data-target="#uploadModal"
+  </center>
+  
+  <!-- Modal for Image Upload -->
+  <div
+    class="modal fade"
+    id="uploadModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="uploadModalLabel"
+    aria-hidden="true"
   >
-    <b style="color: black">Upload an Image</b>
-  </button>
-</center>
-
-<!-- Modal for Image Upload -->
-<div
-  class="modal fade"
-  id="uploadModal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="uploadModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="uploadModalLabel">
-          Upload Image for Analysis
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="/submit" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="task">Select Task:</label>
-            <select id="task" name="task" class="form-control" required>
-              <option value="disease">Disease Detection</option>
-              <option value="crop">Crop Classification</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="image">Upload Image:</label>
-            <input
-              type="file"
-              id="image"
-              name="image"
-              class="form-control"
-              accept="image/*"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadModalLabel">
+            Upload Image for Analysis
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="task">Select Task:</label>
+              <select id="task" name="task" class="form-control" required>
+                <option value="disease">Disease Detection</option>
+                <option value="crop">Crop Classification</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="image">Upload Image:</label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                class="form-control"
+                accept="image/*"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="row p-5 laptop">
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://extension.umn.edu/sites/extension.umn.edu/files/Two%20apples%20close-up_screen.jpg"
-        class="img-fluid"
-        style="width: 100%"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Apple🍎🍏</p>
-      </center>
+  
+  <div class="row p-5 laptop">
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://extension.umn.edu/sites/extension.umn.edu/files/Two%20apples%20close-up_screen.jpg"
+          class="img-fluid"
+          style="width: 100%"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Apple🍎🍏</p>
+        </center>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/6/28/fresh-corn-on-the-cob-partially-shucked-on-dark-background.jpg.rend.hgtvcom.616.411.suffix/1687987003387.jpeg"
+          class="img-fluid"
+          style="width: 100%"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Corn (Maize)🌽</p>
+        </center>
+      </div>
+    </div>
+  
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://img.livestrong.com/630x/cme-data/getty%2F675e888d28434591913da6d425a7e907.jpg?type=webp"
+          class="img-fluid"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Grapes🍇</p>
+        </center>
+      </div>
+    </div>
+  
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://assets-jpcust.jwpsrv.com/thumbnails/b06jjl1d-720.jpg"
+          class="img-fluid"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Potato🥔</p>
+        </center>
+      </div>
+    </div>
+  
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://images.indianexpress.com/2020/02/strawberry-1200.jpg"
+          class="img-fluid"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Strawberry🍓</p>
+        </center>
+      </div>
+    </div>
+  
+    <div class="col-md-4 mb-4">
+      <div class="p-3 bg-white shadow rounded-lg">
+        <img
+          src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg"
+          class="img-fluid"
+        />
+        <center>
+          <p class="lead" style="font-weight: 500; color: black">Tomato🍅</p>
+        </center>
+      </div>
     </div>
   </div>
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/6/28/fresh-corn-on-the-cob-partially-shucked-on-dark-background.jpg.rend.hgtvcom.616.411.suffix/1687987003387.jpeg"
-        class="img-fluid"
-        style="width: 100%"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Corn (Maize)🌽</p>
-      </center>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://img.livestrong.com/630x/cme-data/getty%2F675e888d28434591913da6d425a7e907.jpg?type=webp"
-        class="img-fluid"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Grapes🍇</p>
-      </center>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://assets-jpcust.jwpsrv.com/thumbnails/b06jjl1d-720.jpg"
-        class="img-fluid"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Potato🥔</p>
-      </center>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://images.indianexpress.com/2020/02/strawberry-1200.jpg"
-        class="img-fluid"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Strawberry🍓</p>
-      </center>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="p-3 bg-white shadow rounded-lg">
-      <img
-        src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg"
-        class="img-fluid"
-      />
-      <center>
-        <p class="lead" style="font-weight: 500; color: black">Tomato🍅</p>
-      </center>
-    </div>
-  </div>
-</div>
-<!-- Chatbase chatbot configuration -->
-<script>
-  window.embeddedChatbotConfig = {
-    chatbotId: "Kn_iUIqlTzwsNl0fOjYLS",
-    domain: "www.chatbase.co",
-  };
-</script>
-<script
-  src="https://www.chatbase.co/embed.min.js"
-  chatbotId="Kn_iUIqlTzwsNl0fOjYLS"
-  domain="www.chatbase.co"
-  defer
-></script>
-{% endblock body %}
+  
+  {% endblock body %}
+  
