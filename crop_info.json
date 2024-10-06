@@ -1,101 +1,79 @@
 {
-    "crops": [
-      {
-        "name": "Apple Blotch",
-        "description": "Apple blotch is a fungal disease that causes dark, irregular spots on apple leaves and fruit. It can lead to reduced fruit quality and premature leaf drop.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/apple_blotch.png"
-      },
-      {
-        "name": "Apple Scab",
-        "description": "Apple scab is a fungal disease that causes dark, sunken lesions on leaves, fruit, and stems. It reduces fruit yield and quality.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/apple_scab.png"
-      },
-      {
-        "name": "Apple Healthy Apple",
-        "description": "Healthy apple trees are free from diseases and pests. They have robust foliage, fruit, and stems.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/healthy_apple.png"
-      },
-      {
-        "name": "Apple Rotten Apple",
-        "description": "Rotten apples are affected by various diseases or storage issues, causing decay and a mushy texture.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/rotten_apple.png"
-      },
-      {
-        "name": "Corn (Maize) Ear Rot",
-        "description": "Ear rot is caused by fungi that infect corn ears, leading to kernel discoloration, mold growth, and reduced quality.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/ear_rot.png"
-      },
-      {
-        "name": "Corn (Maize) Fall Armyworm",
-        "description": "Fall armyworm is a pest that damages corn by feeding on leaves and ears, causing reduced yield and plant health.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/fall_armyworm.png"
-      },
-      {
-        "name": "Corn (Maize) Healthy Corn (Maize)",
-        "description": "Healthy corn plants have strong, vigorous growth and produce high-quality ears of corn.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/healthy_corn.png"
-      },
-      {
-        "name": "Corn (Maize) Stem Borer",
-        "description": "Stem borer is a pest that burrows into the corn stalk, weakening the plant and potentially leading to lodging and reduced yield.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/stem_borer.png"
-      },
-      {
-        "name": "Grapes Healthy Grapes",
-        "description": "Healthy grapevines exhibit vigorous growth, robust leaves, and high-quality fruit.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/healthy_grapes.png"
-      },
-      {
-        "name": "Potato Healthy Potato",
-        "description": "Healthy potato plants have strong, green foliage and produce high-quality tubers.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/healthy_potato.png"
-      },
-      {
-        "name": "Potato Rotten Potato",
-        "description": "Rotten potatoes are affected by diseases or improper storage, leading to decay and an unappetizing appearance.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/rotten_potato.png"
-      },
-      {
-        "name": "Strawberry Healthy Strawberry or Pickable Strawberry",
-        "description": "Healthy or pickable strawberries are ripe and suitable for consumption, exhibiting vibrant color and firmness.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/healthy_pickable_strawberry.png"
-      },
-      {
-        "name": "Strawberry Rotten Strawberry",
-        "description": "Rotten strawberries are overripe or affected by diseases, leading to mushy texture and discoloration.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/rotten_strawberry.png"
-      },
-      {
-        "name": "Strawberry Unpickable Strawberry",
-        "description": "Unpickable strawberries are either under-ripe or affected by pests/diseases, making them unsuitable for consumption.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/unpickable_strawberry.png"
-      },
-      {
-        "name": "Tomato Ripe Tomato or Healthy Tomato",
-        "description": "Ripe or healthy tomatoes are fully developed and suitable for consumption, with a firm texture and vibrant color.",
-        "safe_to_consume": "Yes",
-        "image_url": "http://example.com/ripe_healthy_tomato.png"
-      },
-      {
-        "name": "Tomato Rotten Tomato",
-        "description": "Rotten tomatoes are affected by diseases or improper handling, causing decay and an unappealing texture.",
-        "safe_to_consume": "No",
-        "image_url": "http://example.com/rotten_tomato.png"
-      }
-    ]
-  }
-  
+  "crops": [
+    {
+      "name": "Apple Blotch",
+      "description": "Apple blotch is a fungal disease that causes dark, irregular spots on apple leaves and fruit. These spots eventually enlarge, leading to significant damage. If left untreated, the disease can cause premature leaf drop, reduced fruit quality, and reduced overall yield.",
+      "recommendation": "Regularly apply fungicides, prune infected branches, and ensure proper air circulation between trees to minimize the disease spread."
+    },
+    {
+      "name": "Apple Scab",
+      "description": "Apple scab is a common fungal disease characterized by dark, sunken lesions on leaves, fruit, and stems. Infected fruit may crack or become deformed, and the tree's overall yield and fruit quality are compromised. The disease thrives in wet and humid conditions.",
+      "recommendation": "Apply preventive fungicides early in the season and remove fallen leaves to prevent reinfection. Cultivate resistant apple varieties when possible."
+    },
+    {
+      "name": "Corn (Maize) Ear Rot",
+      "description": "Ear rot is caused by fungal pathogens that infect corn ears, leading to mold growth, kernel discoloration, and a reduction in grain quality. Severe infections can result in significant yield loss.",
+      "recommendation": "Use resistant corn varieties and practice crop rotation. Apply appropriate fungicides when conditions favor the disease, and harvest promptly to avoid further contamination."
+    },
+    {
+      "name": "Corn (Maize) Fall Armyworm",
+      "description": "Fall armyworm is a destructive pest that feeds on corn leaves, ears, and stalks. Infestations lead to reduced plant vigor and lower yield. The pest can also migrate to new areas, making control difficult.",
+      "recommendation": "Monitor fields regularly for early signs of damage. Use biological controls, such as natural predators, or apply insecticides when infestation levels are high."
+    },
+    {
+      "name": "Corn (Maize) Stem Borer",
+      "description": "Stem borer is an insect pest that burrows into corn stalks, causing internal damage. Infestations lead to lodging, reduced yield, and poor plant health.",
+      "recommendation": "Use resistant varieties and apply biological or chemical controls. Crop rotation and early planting can help reduce pest pressure."
+    },
+    {
+      "name": "Healthy Apple",
+      "description": "Healthy apple trees are free from pests and diseases, with strong, vibrant foliage, smooth-skinned fruit, and healthy stems. These trees produce high-quality apples, which are crisp and flavorful.",
+      "recommendation": "Regular pruning, proper fertilization, and pest management are recommended for maintaining the health of apple trees."
+    },
+    {
+      "name": "Healthy Corn (Maize)",
+      "description": "Healthy corn plants are characterized by strong, vigorous growth, dark green leaves, and well-formed ears with fully developed kernels. Proper care and disease prevention result in high-quality yields.",
+      "recommendation": "Ensure proper irrigation, fertilization, and pest management to maintain healthy corn crops."
+    },
+    {
+      "name": "Healthy Grapes",
+      "description": "Healthy grapevines show vigorous growth, with lush green leaves and high-quality fruit clusters. Proper care ensures that grapes remain free from disease and pest infestations, producing sweet and firm berries.",
+      "recommendation": "Maintain regular pruning, provide sufficient water, and monitor for early signs of pests and diseases to ensure healthy grape production."
+    },
+    {
+      "name": "Healthy Potato",
+      "description": "Healthy potato plants produce strong, green foliage and high-quality tubers free from disease or pest damage. Proper care, such as adequate watering and pest control, results in a bountiful harvest.",
+      "recommendation": "Rotate crops regularly, use disease-free seed potatoes, and monitor for pests and diseases to maintain healthy plants."
+    },
+    {
+      "name": "Healthy Strawberry",
+      "description": "Healthy strawberries are firm, vibrant, and ready for consumption. These fruits are ripe, displaying bright red color and a sweet flavor.",
+      "recommendation": "Water strawberries adequately, remove damaged fruits, and monitor for diseases like powdery mildew. Apply organic or chemical pest control when needed."
+    },
+    {
+      "name": "Healthy Tomato",
+      "description": "Ripe and healthy tomatoes have a firm texture, vibrant red or green color (in the case of green tomatoes), and excellent flavor. Proper care ensures that the tomatoes remain free from diseases and pests, producing high-quality fruit.",
+      "recommendation": "Prune tomato plants regularly, monitor for pests like aphids or whiteflies, and use proper fertilization techniques to maintain plant health."
+    },
+    {
+      "name": "Rotten Apple",
+      "description": "Rotten apples are affected by a variety of diseases or storage issues, leading to decay, browning, and a mushy texture. Overripe fruit can attract pests and lead to further spoilage.",
+      "recommendation": "Remove rotten apples promptly to prevent the spread of disease. Store apples in cool, dry conditions to extend their shelf life."
+    },
+    {
+      "name": "Rotten Potato",
+      "description": "Rotten potatoes are caused by diseases like late blight or improper storage conditions, leading to a soft texture, discoloration, and foul odor. Rotten potatoes are unmarketable and can spread decay to surrounding tubers.",
+      "recommendation": "Store potatoes in cool, dark, and dry places. Dispose of rotten potatoes to prevent the spread of decay and use fungicides as necessary."
+    },
+    {
+      "name": "Rotten Tomato",
+      "description": "Rotten tomatoes are the result of improper handling, over-ripening, or fungal infections like late blight. The fruit becomes soft, discolored, and unsuitable for consumption.",
+      "recommendation": "Remove affected tomatoes immediately to prevent the spread of disease. Improve ventilation in storage areas and treat plants with fungicides if necessary."
+    },
+    {
+      "name": "Unpickable Strawberry",
+      "description": "Unpickable strawberries are either under-ripe, misshapen, or affected by pests and diseases, making them unsuitable for consumption. These fruits fail to meet quality standards for harvest.",
+      "recommendation": "Enhance soil health, monitor for pests, and ensure consistent watering to encourage proper fruit development."
+    }
+  ]
+}

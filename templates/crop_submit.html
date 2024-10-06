@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
-{% block pagetitle %} {{ title }} {% endblock pagetitle %}
-
+{% block pagetitle %} {{ crop_type }} {% endblock pagetitle %}
 {% block body %}
 <div class="container mt-5">
   <div class="row justify-content-center">
@@ -10,7 +8,7 @@
       <div class="row mb-4 text-center">
         <div class="col">
           <h1 class="display-4" style="font-weight: 400; color: rgb(4, 54, 4)">
-            <b>{{ title }}</b>
+            <b>{{ crop_type }} 🍃</b>
           </h1>
         </div>
       </div>
@@ -30,7 +28,6 @@
         </div>
       </div>
 
-      {% if crop_type and crop_details %}
       <!-- Crop Classification Results -->
       <div class="row mb-4">
         <div class="col">
@@ -40,20 +37,20 @@
           </div>
         </div>
       </div>
-      {% else %}
+
+      <!-- Prevention Tips Section -->
       <div class="row mb-4">
         <div class="col">
           <div class="p-3 bg-white shadow rounded-lg">
-            <h5><b>Unknown Crop</b></h5>
-            <p>No details available for this crop.</p>
+            <h5><b>Prevention Tips:</b></h5>
+            <p>{{ crop_recommendations }}</p>
           </div>
         </div>
       </div>
-      {% endif %}
+
     </div>
   </div>
 </div>
-{% endblock body %}
 <!-- Chatbase chatbot configuration -->
 <script>
   window.embeddedChatbotConfig = {
@@ -67,3 +64,4 @@
   domain="www.chatbase.co"
   defer
 ></script>
+{% endblock body %}

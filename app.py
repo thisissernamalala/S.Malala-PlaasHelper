@@ -24,34 +24,34 @@ with open('crop_info.json', 'r') as f:
 
 # Load models
 try:
-    crop_classifier_model = tf.keras.models.load_model("Trained Models/crop_classification_modell.h5")
-    disease_detection_model = tf.keras.models.load_model("Trained Models/crop_disease_model.h5")
+    crop_classifier_model = tf.keras.models.load_model("Trained Models/balanced_crop_diseases_model.h5")  # Crop model with 15 classes
+    disease_detection_model = tf.keras.models.load_model("Trained Models/crop_disease_model.h5")  # Disease detection model with 27 classes
     print("Models loaded successfully.")
 except Exception as e:
     print(f"Error loading models: {e}")
 
-# Manually map class indices to class names (16 classes)
+# Crop class labels (15 classes)
 crop_class_labels = {
     0: 'Apple Blotch',
-    1: 'Apple Healthy Apple',
-    2: 'Apple Rotten Apple',
-    3: 'Apple Scab',
-    4: 'Corn (Maize) Ear Rot',
-    5: 'Corn (Maize) Fall Armyworm',
-    6: 'Corn (Maize) Healthy Corn (Maize)',
-    7: 'Corn (Maize) Stem Borer',
-    8: 'Grapes Healthy Grapes',
-    9: 'Potato Healthy Potato',
-    10: 'Potato Rotten Potato',
-    11: 'Strawberry Healthy Strawberry or Pickable Strawberry',
-    12: 'Strawberry Rotten Strawberry',
-    13: 'Strawberry Unpickable Strawberry',
-    14: 'Tomato Ripe Tomato or Healthy Tomato',
-    15: 'Tomato Rotten Tomato'
+    1: 'Apple Scab',
+    2: 'Corn (Maize) Ear Rot',
+    3: 'Corn (Maize) Fall Armyworm',
+    4: 'Corn (Maize) Stem Borer',
+    5: 'Healthy Apple',
+    6: 'Healthy Corn (Maize)',
+    7: 'Healthy Grapes',
+    8: 'Healthy Potato',
+    9: 'Healthy Strawberry',
+    10: 'Healthy Tomato',
+    11: 'Rotten Apple',
+    12: 'Rotten Potato',
+    13: 'Rotten Tomato',
+    14: 'Unpickable Strawberry'
 }
 
+# Preprocess images for both models (224x224 for crop model, 150x150 for disease model)
 def preprocess_image(image_path, target_size=(150, 150)):
-    """Preprocess the image for model prediction."""
+    """Preprocess the image for model prediction based on target size."""
     try:
         image = load_img(image_path, target_size=target_size)
         image = img_to_array(image)
@@ -62,39 +62,36 @@ def preprocess_image(image_path, target_size=(150, 150)):
         print(f"Error preprocessing image: {e}")
         return None
 
+# Predict crop type using the crop classifier model
 def predict_with_crop_classifier(image_path):
-    """Predict the crop type using the crop classifier model."""
-    image = preprocess_image(image_path)
+    """Predict the crop type using the crop classifier model (15 classes)."""
+    image = preprocess_image(image_path, target_size=(150, 150))  # Resize to 224x224 for crop model
     if image is None:
         return -1
     try:
         output = crop_classifier_model.predict(image)
-        return np.argmax(output)
+        predicted_index = np.argmax(output)
+        predicted_label = crop_class_labels.get(predicted_index, 'Unknown Crop')
+        print(f"Predicted class index: {predicted_index}, Predicted label: {predicted_label}")
+        return predicted_index
     except Exception as e:
         print(f"Error predicting with crop classifier model: {e}")
         return -1
 
+# Predict disease using the disease detection model
 def predict_with_disease_detection_model(image_path):
-    """Predict the disease using the disease detection model."""
-    image = preprocess_image(image_path)
+    """Predict the disease using the disease detection model (27 classes)."""
+    image = preprocess_image(image_path, target_size=(150, 150))  # Resize to 150x150 for disease model
     if image is None:
         return -1
     try:
         output = disease_detection_model.predict(image)
-        return np.argmax(output)
+        predicted_index = np.argmax(output)
+        print(f"Predicted disease class index: {predicted_index}")
+        return predicted_index
     except Exception as e:
         print(f"Error predicting with disease detection model: {e}")
         return -1
-
-def format_disease_name(disease_name):
-    """Format the disease name by replacing underscores with spaces, capitalizing each word, and removing duplicates."""
-    words = disease_name.replace('__', ' ').replace('_', ' ').split()
-    # Capitalize the first occurrence of each word
-    formatted_words = [word.capitalize() for word in words]
-    # Check if the crop name appears twice and remove the duplicate
-    if formatted_words.count(formatted_words[0]) > 1:
-        formatted_words = [formatted_words[0]] + [word for word in formatted_words[1:] if word != formatted_words[0]]
-    return ' '.join(formatted_words)
 
 @app.route('/')
 def home_page():
@@ -103,22 +100,6 @@ def home_page():
 @app.route('/index')
 def ai_engine_page():
     return render_template('index.html')
-
-@app.route('/mobile-device')
-def mobile_device_detected_page():
-    return render_template('mobile-device.html')
-
-@app.route('/chatbot')
-def chatbot_page():
-    return render_template('chatbot.html')
-
-@app.route('/stats')
-def stats():
-    return render_template('stats.html')
-
-@app.route('/weather')
-def weather():
-    return render_template('weather.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -130,41 +111,48 @@ def submit():
         image.save(file_path)
 
         if task == 'disease':
-            # Predict with disease detection model
+            # Predict with disease detection model (27 classes)
             disease_pred = predict_with_disease_detection_model(file_path)
             if disease_pred != -1:
                 disease = disease_info['diseases'][disease_pred]
-                formatted_name = format_disease_name(disease['name'])
                 description = disease['description']
-                prevent = disease['prevention']
-                recommendation = recommendations.get(formatted_name, {})
-                rec_name = recommendation.get('specialist_name', 'N/A')
-                rec_description = recommendation.get('specialist_description', 'N/A')
-                rec_contact = recommendation.get('specialist_contact', 'N/A')
+                prevention = disease['prevention']
+                recommendation = recommendations.get(disease['name'], {})
                 return render_template('submit.html',
-                                       image_filename=filename,  # Pass image filename to the template
-                                       title=formatted_name,
+                                       image_filename=filename,
+                                       title=disease['name'],
                                        desc=description,
-                                       prevent=prevent,
-                                       specialist_name=rec_name,
-                                       specialist_description=rec_description,
-                                       specialist_contact=rec_contact,
-                                       is_disease=True)  # Indicate it's a disease detection
+                                       prevent=prevention,
+                                       recommendation=recommendation,
+                                       is_disease=True)  # Indicate it's disease detection
             else:
                 return "Error with disease prediction."
+
         elif task == 'crop':
-            # Predict crop type
+            # Predict crop type with crop classifier model (15 classes)
             crop_pred = predict_with_crop_classifier(file_path)
             if crop_pred != -1:
                 crop_class = crop_class_labels.get(crop_pred, 'Unknown Crop')
-                crop_details = crop_info.get(crop_class, {})
-                description = crop_details.get('description', 'No additional information available.')
-                return render_template('crop_submit.html',
-                                       image_filename=filename,  # Pass image filename to the template
-                                       crop_type=crop_class,
-                                       crop_details=description)
+
+                # Search for the crop in crop_info.json based on name
+                crop_details = next((crop for crop in crop_info['crops'] if crop['name'] == crop_class), None)
+
+                if crop_details:
+                    description = crop_details['description']
+                    # Get recommendations for the crop
+                    crop_recommendations = crop_details.get('recommendation', 'No preventive tips available.')
+
+                    return render_template('crop_submit.html',
+                                           image_filename=filename,
+                                           crop_type=crop_class,
+                                           crop_details=description,
+                                           crop_recommendations=crop_recommendations)  # Pass preventive tips to the template
+                else:
+                    return "Crop information not available."
+
             else:
                 return "Error with crop prediction."
+
         else:
             return "Invalid task selected."
 
